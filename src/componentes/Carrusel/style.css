@@ -1,0 +1,14 @@
+.imgPrincipal {
+  background-image: url("https://antiguedadespasquin.com/wp-content/uploads/2021/05/MG_4743-scaled.jpg");
+  min-height: 450px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none !important;
+  display: flex;
+  padding: 50px;
+  background-color: rgba(29, 28, 28, 0.4);
+  position: relative;
+}
+

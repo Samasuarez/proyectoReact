@@ -1,3 +1,9 @@
+.navbarStyles {
+ 
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
 .List-Nav {
   list-style-type: none;
   margin: 0;
@@ -30,4 +36,13 @@
     height: 40px;
     display: flex ;
     flex-direction: row;
+}
+.WitgetCont{
+  position: absolute;
+  right: 40px;
+  top: 6px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
 }

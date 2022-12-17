@@ -1,0 +1,54 @@
+.imgCard {
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  overflow: hidden !important;
+  position: relative;
+}
+
+.imgCard p {
+  position: absolute;
+  z-index: 5;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.imgCard img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.imgAnimation {
+  transform: scale(1);
+  transition: 4s;
+}
+.imgAnimation:hover {
+  transform: scale(1.2);
+  transition: 4s;
+  filter: sepia(100%);
+}
+.Container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "titulosCards titulosCards titulosCards"
+    "Container Container Container ";
+}
+.titulosCards{
+  grid-area: titulosCards;
+  margin: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+	align-content: space-around;
+}
