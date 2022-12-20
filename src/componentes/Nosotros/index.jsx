@@ -1,11 +1,16 @@
 import React from "react";
-import {BsCashCoin} from "react-icons/bs";
-import {MdPointOfSale} from "react-icons/bs";
-import {MdLocalShipping}  from "react-icons/bs";
-import {BsFillChatDotsFill} from "react-icons/bs";
+import './style.css'
+import { BsCashCoin } from "react-icons/bs";
+import { MdPointOfSale } from "react-icons/md";
+import { MdLocalShipping } from "react-icons/md";
+import { BsFillChatDotsFill } from "react-icons/bs";
+
 const Nosotros = () => {
   return (
     <div className="text-nosotros">
+      <div className="titulo-nosotros">
+        <h1>Nosotros</h1>
+      </div>
       <div className="card-nosotros">
         <span><BsCashCoin/></span>
         <h4>Cotización</h4>
