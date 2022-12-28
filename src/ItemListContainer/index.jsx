@@ -1,20 +1,37 @@
-import React from 'react';
-import Card from '../componentes/Item';
-import './style.css'
+import { useEffect } from "react";
+import { useState } from "react";
 
- const ItemListContainer = () => {
+import ItemList from "../componentes/itemList";
+
+import { productos } from "../data";
+import "./style.css";
+
+const ItemListContainer = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const promesa = new Promise((acc, rec) => {
+      setTimeout(() => {
+        acc(productos);
+      }, 3000);
+    });
+
+    promesa
+      .then((result) => {
+        setProducts(result);
+      })
+      .catch(() => {
+        alert("Hubo un error");
+      });
+  }, []);
+  console.log(products);
   return (
-    <div className="CardContainer">
-      <Card title={"Titulo 1"} />
-      <Card title={"Titulo 2"} />
-      <Card title={"Titulo 3"} />
-      <Card title={"Titulo 4"} />
-      <Card title={"Titulo 5"} />
-      <Card title={"Titulo 6"} />
-      <Card title={"Titulo 7"} />
-      <Card title={"Titulo 8"} />
-      <Card title={"Titulo 9"} />
-      <Card title={"Titulo 10"} />
+    <div className="container">
+      <div className="TituloContainer">
+        <h1>En remate</h1>
+      </div>
+      <h1>{productos.id}</h1>
+      <ItemList productos={products} />
     </div>
   );
 };

@@ -2,12 +2,12 @@ import React from "react";
 import './style.css'
 const FooterContainer = ()=>{
 return(   
-<footer class="footerGrid footerStyles">
-      <div class="container">
+<footer className="footerStyles">
+      <div style={{display:'flex', flexDirection:'column', width:'100%', margin:'0 40px'}}>
         <hr />
-        <div class="d-flex justify-content-between">
-          <a class="nav-link" href="#">Anticuario</a>
-          <a class="nav-link" href="#">anticuarioBa@gmail.com</a>
+        <div className="d-flex justify-content-between">
+          <a className="nav-link" href="/#">Anticuario</a>
+          <a className="nav-link" href="/#">anticuarioBa@gmail.com</a>
         </div>
       </div>
     </footer>
