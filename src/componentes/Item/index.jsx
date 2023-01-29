@@ -5,12 +5,16 @@ import "./style.css";
 
 const Item = ({ product }) => {
   return (
-    <div className="containerItem" style={{width: '18rem'}}>
-      <div  className="card">
-      <img src={product.src} className="card-img-top" alt={`id-${product.id}`}/>
-        <h5 >{product.titulo}</h5>
-        <p >{product.precio}</p>
-        <Link to={`/detail/${product.id}`}>Ver detalle</Link>
+    <div className="card" style={{ width: "18rem" }}>
+      <div className="card-body">
+        <img className="card-img-top" src={product.src} alt={`id-${product.id}`}/>
+        <p className="card-title">{product.titulo}</p>
+        <p className="card-text">{product.categoria}</p>
+        <p className="card-text">$ {product.precio}</p>
+        <hr></hr>
+        <Link to={`/detail/${product.id}`} className="btn btn-primary">
+          {product.estado}
+        </Link>
       </div>
     </div>
   );

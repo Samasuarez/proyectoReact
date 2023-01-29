@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Shop } from "../context/ShopProvider";
 import ItemCount from "../itemCount";
 // import ItemCount from "./ItemCount";
-// import "./styles.scss";
+import "./styles.css";
 
 const ItemDetail = ({ detail }) => {
    
@@ -18,13 +18,11 @@ const ItemDetail = ({ detail }) => {
         addProduct({...detail, quantity: cantidad})
     }
 
-    console.log(detail.title);
     return (
         <div className="detail-container">
-            <img className="detail-img" src={detail.image} alt="detail" />
+            <img className="detail-img" src={detail.src} alt="detail" />
             <aside className="detail-aside">
-                
-                <h4>{detail.title}</h4>
+                <h4>{detail.titulo}</h4>
                 {
                     quantity === 0 ?
                     <ItemCount 
@@ -34,7 +32,7 @@ const ItemDetail = ({ detail }) => {
                     />
                     :
                     <button className="btn btn-primary p-2">
-                        <Link to="/cart">
+                        <Link className="text-light" to="/cart">
                             Go cart
                         </Link>
                     </button>

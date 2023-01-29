@@ -11,7 +11,6 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const { categoryId } = useParams();
   useEffect(() => {
-   
     const getProducts = async () => {
       let querySnapshot;
       if (categoryId) {
@@ -30,34 +29,21 @@ const ItemListContainer = () => {
           ...doc.data(),
         };
         ProductosFirebase.push(product);
-        console.log(product)
       });
       setProducts(ProductosFirebase);
     };
     getProducts();
-    // const promesa = new Promise((acc, rec) => {
-    //   setTimeout(() => {
-    //     acc(products);
-    //   }, 3000);
-    // });
-    // promesa
-    //   .then((result) => {
-    //     setProducts(result);
-    //   })
-    //   .catch(() => {
-    //     alert("Hubo un error");
-    //   });
   }, [categoryId]);
 
   return (
     <div>
-      <Home />
+      {/* <Home /> */}
       <div className="container">
         <div className="TituloContainer">
           <h1>En remate</h1>
         </div>
         <h1>{products.id}</h1>
-        <ItemList producto={products} />
+        <ItemList productos={products} />
       </div>
     </div>
   );
