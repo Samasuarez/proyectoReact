@@ -1,0 +1,16 @@
+- itemListDetail: Hacer el routing deste las card
+- Rutas a configurar:
+	'/' navega a itemListContainer
+	'/category/:id' itemListContainer
+	'/item/id' navega a itemDetailContainer
+- Links a configurar:
+	clickear en el brand debe navegar a la home
+	clickear en un item.js debe navegar a /item/id
+	clickear en una categoria del navbar debe navegar a /category/:categoryId
+- Conectar la coleccion de firestore con el listado de items y y el detalle
+- Eliminar async mocks (promises) y remplazarlos por los llamados de firestore
+- Pagina de carrito (contador, botones, estilos)
+- Pagina de detalle (contador, botones, estilo)
+
+
+	s
