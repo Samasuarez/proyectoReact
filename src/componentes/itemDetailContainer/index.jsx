@@ -10,13 +10,12 @@ const ItemDetailContainer = () => {
   const [detail, setDetail] = useState({})
   const {id} = useParams()
   
-  useEffect(()=> {
+ useEffect(()=> {
 
     const getProduct = async () => {
       const docRef = doc(db, "productos", id);
       const docSnap = await getDoc(docRef);
 
-  
       if (docSnap.exists()) {
         console.log("Document data:", docSnap.data());
         const productDetail = {
@@ -38,7 +37,10 @@ const ItemDetailContainer = () => {
           Object.keys(detail).length === 0 
             ? <h2>Loading ...</h2>
             : <ItemDetail detail={detail}/>
-        }
+          }
+          
+        
+        
     </div>
   )
 }

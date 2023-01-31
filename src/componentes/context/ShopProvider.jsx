@@ -41,8 +41,12 @@ const ShopProvider = ({ children }) => {
     return products.some((product) => product.id === id);
   };
 
+  const cleanCart = ()=>{
+    setProducts([])
+  }
+
   return (
-    <Shop.Provider value={{ products, addProduct, countCart, removeProduct, total }}>
+    <Shop.Provider value={{ products, addProduct, countCart, removeProduct, total, cleanCart }}>
       {children}
     </Shop.Provider>
   );

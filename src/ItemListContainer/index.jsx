@@ -6,6 +6,7 @@ import Home from "../vistas/home";
 import "./style.css";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useParams } from "react-router-dom";
+import CarruselBts from "../componentes/Carrusel";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -16,7 +17,7 @@ const ItemListContainer = () => {
       if (categoryId) {
         const q = query(
           collection(db, "productos"),
-          where("Categoria", "==", categoryId)
+          where("categoria", "==", categoryId)
         );
         querySnapshot = await getDocs(q);
       } else {
@@ -38,6 +39,7 @@ const ItemListContainer = () => {
   return (
     <div>
       {/* <Home /> */}
+      <CarruselBts />
       <div className="container">
         <div className="TituloContainer">
           <h1>En remate</h1>

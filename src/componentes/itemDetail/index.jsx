@@ -22,18 +22,19 @@ const ItemDetail = ({ detail }) => {
         <div className="detail-container">
             <img className="detail-img" src={detail.src} alt="detail" />
             <aside className="detail-aside">
-                <h4>{detail.titulo}</h4>
+                <h4>{detail.Detalle}</h4>
+                <h4>{detail.precio}</h4>
                 {
                     quantity === 0 ?
                     <ItemCount 
-                        stock={20} 
+                        stock={detail.stock} 
                         initial={1} 
                         onAdd={onAdd}    
                     />
                     :
                     <button className="btn btn-primary p-2">
                         <Link className="text-light" to="/cart">
-                            Go cart
+                            Ir al carrito
                         </Link>
                     </button>
                 }

@@ -5,71 +5,68 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg  ">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          Anticuario
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Categorias
-              </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item" to="/category/id">
-                  Iluminacion
-                </Link>
-                <Link className="dropdown-item" to="/category/id">
-                  Porcelana
-                </Link>
-                <Link className="dropdown-item" to="/category/id">
-                  Cristales
-                </Link>
-                <Link className="dropdown-item" to="/category/id">
-                  Esculturas
-                </Link>
-                <Link className="dropdown-item" to="/category/id">
-                  Joyeria
-                </Link>
-                <Link className="dropdown-item" to="/category/id">
+    <div className="navbarStyles">
+      <nav className="navbar navbar-expand-lg ">
+        <div className="container-fluid ">
+          <Link to="/" className="navbar-brand ">
+            Anticuario
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link
+                  to="/category/Pinturas"
+                  className="nav-link active"
+                  aria-current="page"
+                >
                   Pinturas
                 </Link>
-                <Link className="dropdown-item" to="/category/id">
-                  Plateria
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/category/Joyeria"
+                >
+                  Joyeria
                 </Link>
-                <Link className="dropdown-item" to="/category/id">
-                  Arte oriental
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/category/Muebles"
+                >
+                  Muebles
                 </Link>
-                <Link className="dropdown-item" to="/category/id">
-                  Vidrios artisticos
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/category/Porcelana"
+                >
+                  Porcelana
                 </Link>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
+          <div className="WitgetCont">
+            <CartWidget />
+          </div>
         </div>
-        <div className="WitgetCont">
-          <CartWidget />
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
